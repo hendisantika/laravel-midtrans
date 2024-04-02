@@ -12,6 +12,13 @@ return new class extends Migration {
     {
         Schema::create('donations', function (Blueprint $table) {
             $table->id();
+            $table->string('invoice');
+            $table->string('name');
+            $table->string('email');
+            $table->bigInteger('amount');
+            $table->text('note');
+            $table->string('status')->default('PENDING');
+            $table->string('snap_token')->nullable();
             $table->timestamps();
         });
     }
