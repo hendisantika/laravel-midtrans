@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Donation extends Model
 {
     use HasFactory;
+
+    /**
+     * fillable
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'invoice',
+        'name',
+        'email',
+        'amount',
+        'note',
+        'status',
+        'snap_token',
+    ];
 }
